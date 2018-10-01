@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="immuneSys_c0"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="proliferateState"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="state_partition2" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{proliferateState},{deadState})"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="regrowth_type" org.eventb.core.predicate="regrowth∈ℕ1"/>
+<org.eventb.core.constant name="+" org.eventb.core.identifier="regrowth"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="initialNum"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="initialNum" org.eventb.core.predicate="initialNum∈ℕ"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="interval"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="interval∈ℕ1"/>
+</org.eventb.core.contextFile>

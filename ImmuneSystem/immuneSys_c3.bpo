@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ImmuneContain" org.eventb.core.type="ℙ(ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
+<org.eventb.core.poIdentifier name="agCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="apcCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="csrelation" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+<org.eventb.core.poIdentifier name="deadState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="growth" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="initialHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="matureMaxHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="matureState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="nonageMaxHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="nonageState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="tCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poPredicate name="ImmuneContaio" org.eventb.core.predicate="partition(ImmuneContain,{tCell},{apcCell},{agCell})" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="ImmuneContaip" org.eventb.core.predicate="nonageMaxHp∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="ImmuneContaiq" org.eventb.core.predicate="matureMaxHp∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="ImmuneContair" org.eventb.core.predicate="initialHp∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="ImmuneContais" org.eventb.core.predicate="initialHp&lt;nonageMaxHp∧initialHp&gt;0∧nonageMaxHp&lt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="ImmuneContait" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{deadState})" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="ImmuneContaiu" org.eventb.core.predicate="csrelation∈ImmuneContain → State" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="ImmuneContaiv" org.eventb.core.predicate="dom(csrelation)=ImmuneContain" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="ImmuneContaiw" org.eventb.core.predicate="growth∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#?"/>
+<org.eventb.core.poIdentifier name="initialNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="interval" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="proliferateState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="regrowth" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="proliferateStatf" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{proliferateState},{deadState})" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="proliferateStatg" org.eventb.core.predicate="regrowth∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="proliferateStath" org.eventb.core.predicate="initialNum∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="proliferateStati" org.eventb.core.predicate="interval∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poIdentifier name="agCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="agCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="apcCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="apcCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="damageattack" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="slightattack" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="proliferateStatj" org.eventb.core.predicate="tCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="proliferateStatk" org.eventb.core.predicate="agCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="proliferateStatl" org.eventb.core.predicate="apcCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="proliferateStatm" org.eventb.core.predicate="tCellTypeid≠agCellTypeid∧agCellTypeid≠apcCellTypeid∧tCellTypeid≠apcCellTypeid" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="proliferateStatn" org.eventb.core.predicate="tCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="proliferateStato" org.eventb.core.predicate="apcCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="proliferateStatp" org.eventb.core.predicate="agCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="proliferateStatq" org.eventb.core.predicate="slightattack∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="proliferateStatr" org.eventb.core.predicate="damageattack∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="proliferateStats" org.eventb.core.predicate="damageattack&gt;slightattack" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#9"/>
+<org.eventb.core.poIdentifier name="limitagCellNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="memoryCellinterval" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sharpGrowth" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_c3.bpo|org.eventb.core.poFile#immuneSys_c3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="limitagCellNum∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sharpGrowth∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sharpGrowth&gt;growth" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="memoryCellinterval∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="memoryCellinterval&lt;interval" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

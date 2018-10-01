@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ImmuneContain" org.eventb.core.type="ℙ(ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="State" org.eventb.core.type="ℙ(State)"/>
+<org.eventb.core.poIdentifier name="agCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="apcCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="csrelation" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+<org.eventb.core.poIdentifier name="deadState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="growth" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="initialHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="matureMaxHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="matureState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="nonageMaxHp" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="nonageState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="tCell" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poPredicate name="ImmuneContaio" org.eventb.core.predicate="partition(ImmuneContain,{tCell},{apcCell},{agCell})" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="ImmuneContaip" org.eventb.core.predicate="nonageMaxHp∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="ImmuneContaiq" org.eventb.core.predicate="matureMaxHp∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="ImmuneContair" org.eventb.core.predicate="initialHp∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="ImmuneContais" org.eventb.core.predicate="initialHp&lt;nonageMaxHp∧initialHp&gt;0∧nonageMaxHp&lt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="ImmuneContait" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{deadState})" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="ImmuneContaiu" org.eventb.core.predicate="csrelation∈ImmuneContain → State" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="ImmuneContaiv" org.eventb.core.predicate="dom(csrelation)=ImmuneContain" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="ImmuneContaiw" org.eventb.core.predicate="growth∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c0.buc|org.eventb.core.contextFile#immuneSys_c0|org.eventb.core.axiom#?"/>
+<org.eventb.core.poIdentifier name="initialNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="interval" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="proliferateState" org.eventb.core.type="State"/>
+<org.eventb.core.poIdentifier name="regrowth" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="proliferateStatf" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{proliferateState},{deadState})" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="proliferateStatg" org.eventb.core.predicate="regrowth∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="proliferateStath" org.eventb.core.predicate="initialNum∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="proliferateStati" org.eventb.core.predicate="interval∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c1.buc|org.eventb.core.contextFile#immuneSys_c1|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poIdentifier name="agCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="agCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="apcCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="apcCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="damageattack" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="slightattack" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellRadius" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellTypeid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="proliferateStatj" org.eventb.core.predicate="tCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="proliferateStatk" org.eventb.core.predicate="agCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="proliferateStatl" org.eventb.core.predicate="apcCellTypeid∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="proliferateStatm" org.eventb.core.predicate="tCellTypeid≠agCellTypeid∧agCellTypeid≠apcCellTypeid∧tCellTypeid≠apcCellTypeid" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="proliferateStatn" org.eventb.core.predicate="tCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="proliferateStato" org.eventb.core.predicate="apcCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="proliferateStatp" org.eventb.core.predicate="agCellRadius∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="proliferateStatq" org.eventb.core.predicate="slightattack∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="proliferateStatr" org.eventb.core.predicate="damageattack∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="proliferateStats" org.eventb.core.predicate="damageattack&gt;slightattack" org.eventb.core.source="/ImmuneSystem/immuneSys_c2.buc|org.eventb.core.contextFile#immuneSys_c2|org.eventb.core.axiom#9"/>
+<org.eventb.core.poIdentifier name="limitagCellNum" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="memoryCellinterval" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="sharpGrowth" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="memoryCellintervam" org.eventb.core.predicate="limitagCellNum∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="memoryCellintervan" org.eventb.core.predicate="sharpGrowth∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="memoryCellintervao" org.eventb.core.predicate="sharpGrowth&gt;growth" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="memoryCellintervap" org.eventb.core.predicate="memoryCellinterval∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="memoryCellintervaq" org.eventb.core.predicate="memoryCellinterval&lt;interval" org.eventb.core.source="/ImmuneSystem/immuneSys_c3.buc|org.eventb.core.contextFile#immuneSys_c3|org.eventb.core.axiom#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cell" org.eventb.core.type="ℙ(ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellNum" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="cellState" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+<org.eventb.core.poIdentifier name="cellcollision" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellrecordinfo" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="hp" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poPredicate name="cellrecordinfp" org.eventb.core.predicate="cell∈ℙ(ImmuneContain)" org.eventb.core.source="/ImmuneSystem/immuneSys_m0.bum|org.eventb.core.machineFile#immuneSys_m0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="cellrecordinfq" org.eventb.core.predicate="hp∈cell → ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m0.bum|org.eventb.core.machineFile#immuneSys_m0|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="cellrecordinfr" org.eventb.core.predicate="cellState∈cell → State" org.eventb.core.source="/ImmuneSystem/immuneSys_m0.bum|org.eventb.core.machineFile#immuneSys_m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="cellrecordinfs" org.eventb.core.predicate="cellNum∈cell → ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m1.bum|org.eventb.core.machineFile#immuneSys_m1|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="cellrecordinft" org.eventb.core.predicate="cellcollision∈cell ↔ cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="cellrecordinfu" org.eventb.core.predicate="cellrecordinfo∈cell → ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.invariant#7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfp" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellNum'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cell'" org.eventb.core.type="ℙ(ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellrecordinfo'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfp" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfp" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfq" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellNum'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfq" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var6|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cellobj=agCell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var6|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfr" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="timepassed" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfr" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfr" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var7|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cellState(cellobj)=nonageState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var7|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="hp(cellobj)&gt;0∧hp(cellobj)&lt;nonageMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var7|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="timepassed∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var7|org.eventb.core.guard#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="timepassed mod interval=0" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var7|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfs" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfs" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfs" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varE|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hp(cellobj)≥nonageMaxHp∧hp(cellobj)&lt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varE|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cellState(cellobj)=nonageState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varE|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Regrowth/act2/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinft"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellState=cellState{cellobj ↦ proliferateState}" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.event#0|org.eventb.core.action#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.event#0|org.eventb.core.action#."/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#Regrowth\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinft" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="timepassed" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinft" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinft" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cellState(cellobj)=matureState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="hp(cellobj)&gt;nonageMaxHp∧hp(cellobj)&lt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="timepassed∈ℕ1" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="timepassed mod interval=0" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var8|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfu" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfu" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varD|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hp(cellobj)&gt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varD|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cellState(cellobj)=matureState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varD|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfv" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="cellNum'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfv" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfv" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈{tCell,agCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var9|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hp(cellobj)&gt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var9|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cellState(cellobj)=proliferateState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var9|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfw" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellrecordinfo'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="apcCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="agCellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfw" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="distance∈ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var:|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="agCellobj∈{agCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var:|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="apcCellobj∈{apcCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var:|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="distance≤agCellRadius+apcCellRadius" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var:|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="agCellobj≠apcCellobj" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var:|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfx" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellrecordinfo'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="apcCellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfx" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfx" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="distance∈ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="apcCellobj∈{apcCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="distance≤agCellRadius+apcCellRadius" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="tCellobj≠apcCellobj" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cellrecordinfo(apcCellobj)∉(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var;|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfy" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="agCellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfy" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="distance∈ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="agCellobj∈{agCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#element3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="tCellobj≠agCellobj" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#element5"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cellrecordinfo(tCellobj)∈(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var=|org.eventb.core.guard#element6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="collision_agCell_tCellWithInfo/cellrecordinfo/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinfz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellrecordinfo{tCellobj ↦ 4}=cellrecordinfo" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.action#element;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ImmuneSystem/immuneSys_m2.bum|org.eventb.core.machineFile#immuneSys_m2|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#collision_agCell_tCellWithInfo\/cellrecordinfo\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinfz" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="cellrecordinfo'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="agCellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinfz" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinfz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="distance∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="agCellobj∈{agCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element4"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element5"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element6"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="tCellobj≠agCellobj" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element7"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cellrecordinfo(tCellobj)∉(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var&gt;|org.eventb.core.guard#element8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="collision_memoryCell_agCell/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf{+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellrecordinfo)∧cellrecordinfo∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf{+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="collision_memoryCell_agCell/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="agCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.action#element5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.action#element5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="collision_memoryCell_agCell/cellcollision/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellcollision{tCellobj ↦ agCell}=cellcollision" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.action#element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#collision_memoryCell_agCell\/cellcollision\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="collision_memoryCell_agCell/hp/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hp{agCellobj ↦ hp(agCellobj) − damageattack}=hp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.action#element5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#collision_memoryCell_agCell\/hp\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinf{" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="distance" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellcollision'" org.eventb.core.type="ℙ(ImmuneContain×ImmuneContain)"/>
+<org.eventb.core.poIdentifier name="agCellobj" org.eventb.core.type="ImmuneContain"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf{+" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinf{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="distance∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#element3"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="agCellobj∈{agCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="tCellobj≠agCellobj" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinf{" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf{+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varC|org.eventb.core.guard#grd5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="memoryCell_growth/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellState)∧cellState∈ImmuneContain ⇸ State" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/grd3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellState(tCellobj)=nonageState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤timepassed∧0&lt;interval" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellrecordinfo)∧cellrecordinfo∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.action#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.action#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_growth/hp/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hp{tCellobj ↦ hp(tCellobj)+sharpGrowth}=hp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.action#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#memoryCell_growth\/hp\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinf|" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="timepassed" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf|(" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinf\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="timepassed∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf|)" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cellState(tCellobj)=nonageState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf|*" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="hp(tCellobj)&gt;0∧hp(tCellobj)&lt;nonageMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf|+" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="timepassed mod interval=0" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinf|" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf\|+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var@|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="memoryCell_regrowth/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellState)∧cellState∈ImmuneContain ⇸ State" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_regrowth/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_regrowth/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf})"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellrecordinfo)∧cellrecordinfo∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf})"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_regrowth/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤timepassed∧0&lt;interval" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#0"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_regrowth/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.action#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_regrowth/hp/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hp{tCellobj ↦ hp(tCellobj)+sharpGrowth}=hp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#memoryCell_regrowth\/hp\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinf}" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="timepassed" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf}'" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinf}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf}(" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cellState(tCellobj)=matureState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf})" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="hp(tCellobj)&gt;nonageMaxHp∧hp(tCellobj)&lt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf}+" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf})" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="timepassed∈ℕ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinf}" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf}+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="timepassed mod interval=0" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varA|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="memoryCell_proliferate/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(hp)∧hp∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellState)∧cellState∈ImmuneContain ⇸ State" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellrecordinfo)∧cellrecordinfo∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tCellobj∈dom(cellNum)∧cellNum∈ImmuneContain ⇸ ℤ" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.action#grd4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.action#grd4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/cellNum/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellNum{tCellobj ↦ cellNum(tCellobj)∗2}=cellNum" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.action#grd4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#memoryCell_proliferate\/cellNum\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/cellState/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cellState{tCellobj ↦ nonageState}=cellState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.action#act1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#memoryCell_proliferate\/cellState\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="memoryCell_proliferate/hp/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTALLHYPcellrecordinf~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="hp{tCellobj ↦ initialHp}=hp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.action#act2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poSequent#memoryCell_proliferate\/hp\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecordinf~" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellNum'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="hp'" org.eventb.core.type="ℙ(ImmuneContain×ℤ)"/>
+<org.eventb.core.poIdentifier name="tCellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf~'" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecordinf~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="tCellobj∈{tCell}" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf~(" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hp(tCellobj)&gt;matureMaxHp" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcellrecordinf~)" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="cellState(tCellobj)=proliferateState" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecordinf~" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTHYPcellrecordinf~)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#varB|org.eventb.core.guard#grd3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcellrecording'" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cellobj" org.eventb.core.type="ImmuneContain"/>
+<org.eventb.core.poIdentifier name="cellState'" org.eventb.core.type="ℙ(ImmuneContain×State)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcellrecording'" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#EVTIDENTcellrecording'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cellobj∈cell" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var?|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="hp(cellobj)&lt;0" org.eventb.core.source="/ImmuneSystem/immuneSys_m3.bum|org.eventb.core.machineFile#immuneSys_m3|org.eventb.core.event#var?|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ImmuneSystem/immuneSys_m3.bpo|org.eventb.core.poFile#immuneSys_m3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+</org.eventb.core.poFile>

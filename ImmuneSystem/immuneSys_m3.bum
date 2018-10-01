@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="+" org.eventb.core.assignment="cell≔{tCell,apcCell}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="hp:∈{tCell,apcCell}→{initialHp}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="cellState:∈{tCell,apcCell}→{nonageState}" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="cellNum:∈{tCell,apcCell}→{initialNum}" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="cellcollision:∈∅" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="cellrecordinfo:∈∅" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="immuneSys_c3"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="immuneSys_m2"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="cell"/>
+<org.eventb.core.variable name="var2" org.eventb.core.identifier="hp"/>
+<org.eventb.core.variable name="var4" org.eventb.core.identifier="cellState"/>
+<org.eventb.core.variable name="var3" org.eventb.core.identifier="cellNum"/>
+<org.eventb.core.variable name="var5" org.eventb.core.identifier="cellcollision"/>
+<org.eventb.core.variable name="var1" org.eventb.core.identifier="cellrecordinfo"/>
+<org.eventb.core.event name="var6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Instrusion">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Instrusion"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="hp(cellobj)≔initialHp" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="cellobj=agCell"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="cellState(cellobj)≔nonageState" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="cellNum(cellobj)≔initialNum" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Growth">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Growth"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="hp(cellobj)≔hp(cellobj)+growth" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(cellobj)=nonageState"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="hp(cellobj)&gt;0∧hp(cellobj)&lt;nonageMaxHp"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="timepassed"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="timepassed∈ℕ1"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="timepassed mod interval =0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="varE" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TrunMatureState">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TrunMatureState"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="hp(cellobj)≥nonageMaxHp∧hp(cellobj)&lt;matureMaxHp" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(cellobj)=nonageState"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="cellState(cellobj)≔matureState" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Regrowth">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Regrowth"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="cellState(cellobj)=matureState"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="hp(cellobj)&gt;nonageMaxHp∧hp(cellobj)&lt;matureMaxHp"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="hp(cellobj)≔hp(cellobj)+regrowth" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="timepassed"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="timepassed∈ℕ1"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="timepassed mod interval =0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="varD" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TrunProliferateState">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="TrunProliferateState"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="hp(cellobj)&gt;matureMaxHp"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(cellobj)=matureState"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="cellState(cellobj)≔proliferateState" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Proliferate">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Proliferate"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈{tCell,agCell}"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="hp(cellobj)&gt;matureMaxHp"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="cellobj"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="cellNum(cellobj)≔cellNum(cellobj)∗2" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="cellState(cellobj)≔nonageState" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="hp(cellobj)≔initialHp" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(cellobj)=proliferateState"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var:" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collision_agCell_apcCell">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="collision_agCell_apcCell"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="distance∈ℤ"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="agCellobj∈{agCell}"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="apcCellobj∈{apcCell}"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="distance≤agCellRadius+apcCellRadius"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="distance"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="agCellobj"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="apcCellobj"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="cellcollision(apcCellobj)≔agCellobj" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="agCellobj≠apcCellobj"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="cellrecordinfo(apcCellobj)≔0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="hp(agCellobj)≔hp(agCellobj)−slightattack" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collision_apcCell_tCell">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="collision_apcCell_tCell"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="distance"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="distance∈ℤ"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="apcCellobj"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="apcCellobj∈{apcCell}"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="distance≤agCellRadius+apcCellRadius"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="tCellobj≠apcCellobj"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="cellcollision(apcCellobj)≔tCellobj" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="cellrecordinfo(apcCellobj)∉∅"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="cellrecordinfo(tCellobj)≔cellrecordinfo(apcCellobj)" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collision_agCell_tCell">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="collision_agCell_tCell"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="distance∈ℤ"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd2" org.eventb.core.predicate="agCellobj∈{agCell}"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd3" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="distance"/>
+<org.eventb.core.parameter name="element1" org.eventb.core.identifier="agCellobj"/>
+<org.eventb.core.parameter name="element2" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="element3" org.eventb.core.label="grd4" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius"/>
+<org.eventb.core.action name="element4" org.eventb.core.assignment="cellcollision(tCellobj)≔agCell" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="element5" org.eventb.core.label="grd5" org.eventb.core.predicate="tCellobj≠agCellobj"/>
+<org.eventb.core.guard name="element6" org.eventb.core.label="grd6" org.eventb.core.predicate="cellrecordinfo(tCellobj)∈∅"/>
+<org.eventb.core.action name="element7" org.eventb.core.assignment="hp(agCellobj)≔hp(agCellobj)−slightattack" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collision_agCell_tCellWithInfo">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="collision_agCell_tCellWithInfo"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="distance"/>
+<org.eventb.core.parameter name="element1" org.eventb.core.identifier="agCellobj"/>
+<org.eventb.core.parameter name="element2" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="element3" org.eventb.core.label="grd1" org.eventb.core.predicate="distance∈ℕ"/>
+<org.eventb.core.guard name="element4" org.eventb.core.label="grd2" org.eventb.core.predicate="agCellobj∈{agCell}"/>
+<org.eventb.core.guard name="element5" org.eventb.core.label="grd3" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.guard name="element6" org.eventb.core.label="grd4" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius"/>
+<org.eventb.core.guard name="element7" org.eventb.core.label="grd5" org.eventb.core.predicate="tCellobj≠agCellobj"/>
+<org.eventb.core.guard name="element8" org.eventb.core.label="grd6" org.eventb.core.predicate="cellrecordinfo(tCellobj)∉∅"/>
+<org.eventb.core.action name="element9" org.eventb.core.assignment="cellcollision(tCellobj)≔agCell" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="element:" org.eventb.core.assignment="hp(agCellobj)≔hp(agCellobj)−damageattack" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="element;" org.eventb.core.assignment="cellrecordinfo(tCellobj)≔4" org.eventb.core.comment="T细胞有记忆的属性" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="varC" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collision_memoryCell_agCell">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="distance"/>
+<org.eventb.core.parameter name="element1" org.eventb.core.identifier="agCellobj"/>
+<org.eventb.core.parameter name="element2" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="element3" org.eventb.core.label="grd1" org.eventb.core.predicate="distance∈ℕ"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd2" org.eventb.core.predicate="agCellobj∈{agCell}"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd3" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.guard name="grd3" org.eventb.core.label="grd4" org.eventb.core.predicate="distance≤agCellRadius+tCellRadius"/>
+<org.eventb.core.guard name="grd4" org.eventb.core.label="grd5" org.eventb.core.predicate="tCellobj≠agCellobj"/>
+<org.eventb.core.guard name="grd5" org.eventb.core.label="grd6" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4"/>
+<org.eventb.core.action name="element4" org.eventb.core.assignment="cellcollision(tCellobj)≔agCell" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="element5" org.eventb.core.assignment="hp(agCellobj)≔hp(agCellobj)−damageattack" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="memoryCell_growth">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="timepassed"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="timepassed∈ℕ"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(tCellobj)=nonageState" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="hp(tCellobj)&gt;0∧hp(tCellobj)&lt;nonageMaxHp"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="timepassed mod interval =0"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="hp(tCellobj)≔hp(tCellobj)+sharpGrowth" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="varA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="memoryCell_regrowth">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="cellState(tCellobj)=matureState"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="hp(tCellobj)&gt;nonageMaxHp∧hp(tCellobj)&lt;matureMaxHp"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="hp(tCellobj)≔hp(tCellobj)+sharpGrowth" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="timepassed"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="timepassed∈ℕ"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="timepassed mod interval =0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="varB" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="memoryCell_proliferate">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tCellobj"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tCellobj∈{tCell}"/>
+<org.eventb.core.guard name="grd1" org.eventb.core.label="grd2" org.eventb.core.predicate="hp(tCellobj)&gt;matureMaxHp"/>
+<org.eventb.core.guard name="grd2" org.eventb.core.label="grd3" org.eventb.core.predicate="cellState(tCellobj)=proliferateState"/>
+<org.eventb.core.guard name="grd3" org.eventb.core.label="grd4" org.eventb.core.predicate="cellrecordinfo(tCellobj)=4"/>
+<org.eventb.core.action name="grd4" org.eventb.core.assignment="cellNum(tCellobj)≔cellNum(tCellobj)∗2" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="cellState(tCellobj)≔nonageState" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="act2" org.eventb.core.assignment="hp(tCellobj)≔initialHp" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Dead">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Dead"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="cellobj∈cell"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="cellState(cellobj)≔deadState" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="hp(cellobj)&lt;0"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="cellobj"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

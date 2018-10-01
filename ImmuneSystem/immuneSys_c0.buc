@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="ImmuneContain"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="tCell"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="apcCell"/>
+<org.eventb.core.constant name="*" org.eventb.core.identifier="agCell"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="cell_partition" org.eventb.core.predicate="partition(ImmuneContain,{tCell},{apcCell},{agCell})"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="nonageMaxHp"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="matureMaxHp"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="initialHp"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="nonageMaxHp_Type" org.eventb.core.predicate="nonageMaxHp∈ℕ"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="matureMaxHp_Type" org.eventb.core.predicate="matureMaxHp∈ℕ1"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="initialHp_Type" org.eventb.core.predicate="initialHp∈ℕ1"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="hpcomparison" org.eventb.core.predicate="initialHp&lt;nonageMaxHp∧initialHp&gt;0∧nonageMaxHp&lt;matureMaxHp"/>
+<org.eventb.core.carrierSet name="4" org.eventb.core.identifier="State"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="state_partition" org.eventb.core.predicate="partition(State,{nonageState},{matureState},{deadState})"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="nonageState"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="matureState"/>
+<org.eventb.core.constant name="8" org.eventb.core.identifier="deadState"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="cell_state_relation" org.eventb.core.predicate="csrelation∈ImmuneContain→State"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="csrelation"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="domOfCS" org.eventb.core.predicate="dom(csrelation)=ImmuneContain"/>
+<org.eventb.core.constant name="&gt;" org.eventb.core.identifier="growth"/>
+<org.eventb.core.axiom name="?" org.eventb.core.label="growth_type" org.eventb.core.predicate="growth∈ℕ1"/>
+</org.eventb.core.contextFile>
